@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endurance Workouts - Workout Tracker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        input[type="text"] {
+            width: 60px;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Endurance Workouts</h1>
+
+        <label for="inputDate">Enter Date:</label>
+        <input type="date" id="inputDate" onchange="displayWorkouts()">
+
+        <table id="workoutsTable">
+            <thead>
+                <tr>
+                    <th>Workout Type</th>
+                    <th>Workout</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Goal</th>
+                </tr>
+            </thead>
+            <tbody id="workoutsBody">
+                <!-- Table content will be added dynamically based on user input -->
+            </tbody>
+        </table>
+        <br>
+        <a href="workouts.html"class="back-btn" onclick="goToHome()">Back to Home</a>
+    </div>
+
+    <script>
+        function displayWorkouts() {
+            var inputDate = document.getElementById('inputDate').value;
+            var workoutsTable = document.getElementById('workoutsTable');
+            var workoutsBody = document.getElementById('workoutsBody');
+
+            // Clear previous table content
+            workoutsBody.innerHTML = "";
+
+            // Example data, you can replace this with your actual data
+            var workoutData = [
+                { type: 'Running', workout: 'Interval Sprints', sets: '', reps: '', goal: '' },
+                { type: 'Cycling', workout: 'Outdoor Cycling', sets: '', reps: '', goal: '' },
+                { type: 'Swimming', workout: 'Freestyle', sets: '', reps: '', goal: '' },
+                { type: 'Rowing', workout: 'Rowing Machine', sets: '', reps: '', goal: '' },
+                { type: 'Jump Rope', workout: 'Double Unders', sets: '', reps: '', goal: '' },
+                { type: 'Hiking', workout: 'Uphill Hike', sets: '', reps: '', goal: '' },
+                // Add more workout data as needed
+            ];
+
+            // Populate table with workout data
+            workoutData.forEach(function (item) {
+                var row = workoutsBody.insertRow();
+                row.insertCell(0).textContent = item.type;
+                row.insertCell(1).textContent = item.workout;
+                row.insertCell(2).innerHTML = '<input type="text" value="' + item.sets + '">';
+                row.insertCell(3).innerHTML = '<input type="text" value="' + item.reps + '">';
+                row.insertCell(4).innerHTML = '<input type="text" value="' + item.goal + '">';
+            });
+
+            // Show the table
+            workoutsTable.style.display = 'block';
+        }
+
+        function goToHome() {
+            // Redirect to the home page or perform desired action
+            alert("Redirecting to Home Page");
+            // window.location.href = "home.html"; // Uncomment and replace with your actual home page URL
+        }
+    </script>
+</body>
+
+</html>
