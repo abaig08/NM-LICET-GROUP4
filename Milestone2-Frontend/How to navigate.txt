@@ -1,0 +1,4 @@
+1.First go to the index page
+2.Either login or signup
+3.check strength or endurance
+4.Enter the data and save
