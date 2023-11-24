@@ -1,4 +1,4 @@
-package com.wta.wta;
+package com.nm.group4.wta;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

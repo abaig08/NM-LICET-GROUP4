@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "WtaApplication",
+            "request": "launch",
+            "mainClass": "com.nm.group4.wta.WtaApplication",
+            "projectName": "wta"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WtaApplication<wta>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.wta.wta.WtaApplication",
+            "projectName": "wta",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
