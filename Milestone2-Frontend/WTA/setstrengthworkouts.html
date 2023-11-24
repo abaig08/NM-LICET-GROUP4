@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Set Strength Workouts</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Set Strength Workouts</h1>
+        <form id="strengthWorkoutForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="workout">Workout:</label>
+            <input type="text" id="workout" placeholder="e.g., Bench Press" required>
+
+            <label for="sets">Sets:</label>
+            <input type="number" id="sets" min="1" required>
+
+            <label for="reps">Reps:</label>
+            <input type="number" id="reps" min="1" required>
+
+            <button type="button" onclick="setStrengthWorkout()">Set Strength Workout</button>
+        </form>
+    </div>
+    <script src="setstrengthworkouts.js"></script>
+</body>
+
+</html>
