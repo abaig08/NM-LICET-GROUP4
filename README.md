@@ -6,13 +6,13 @@ The members of this group are
 * Saam Wesley (311120104051)
 * Samyuktha S (311120104052)
 
-##The project is deployed on the following links:
+## The project is deployed on the following links:
 
-*Frontend : [Frontend Link](https://nm-group4.web.app/)
+* Frontend : [Frontend Link](https://nm-group4.web.app/)
 
 The frontend is deployed on Firebase using React.
 
-*Backend  : [Backend Link](https://nm-group4.uc.r.appspot.com/)
+* Backend  : [Backend Link](https://nm-group4.uc.r.appspot.com/)
 
 The backend is deployed on Google App Engine using Springboot.
 
